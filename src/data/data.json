@@ -1,0 +1,111 @@
+{
+  "restaurant-name": "Bright Bite",
+  "slogan": "Where every bite is a bright spot in your day!",
+  "greeting": "Welcome to Bright Bites, where we serve delicious meals in a cozy and inviting setting. Whether you're looking for a romantic dinner or a family meal, we offer a range of dishes to suit every taste. Check out our menu, make a reservation, or learn about our private dining options. We can't wait to see you!",
+  "menu": {
+    "starters": [
+      {
+        "name": "Garlic Bread",
+        "description": "Toasty bread rubbed with garlic and olive oil. Served with marinara sauce.",
+        "price": 4.99
+      },
+      {
+        "name": "Bruschetta",
+        "description": "Grilled bread topped with chopped tomatoes, garlic, and basil. Drizzled with olive oil.",
+        "price": 6.99
+      },
+      {
+        "name": "Caprese Salad",
+        "description": "Fresh mozzarella cheese, tomatoes, and basil. Drizzled with balsamic vinegar and olive oil.",
+        "price": 8.99
+      },
+      {
+        "name": "Fried Calamari",
+        "description": "Breaded and fried calamari rings. Served with marinara sauce and lemon wedges.",
+        "price": 10.99
+      },
+      {
+        "name": "Buffalo Wings",
+        "description": "Crispy chicken wings tossed in spicy buffalo sauce. Served with celery and blue cheese dressing.",
+        "price": 9.99
+      }
+    ],
+    "entrees": [
+      {
+        "name": "Grilled Salmon with Roasted Vegetables",
+        "description": "Fresh salmon fillet grilled to perfection. Served with a side of roasted vegetables.",
+        "price": 19.99
+      },
+      {
+        "name": "Penne alla Vodka",
+        "description": "Penne pasta in a creamy tomato sauce with a touch of vodka. Topped with Parmesan cheese and fresh basil.",
+        "price": 14.99
+      },
+      {
+        "name": "Chicken Parmesan with Spaghetti",
+        "description": "Breaded chicken breast topped with marinara sauce and melted mozzarella cheese. Served with spaghetti.",
+        "price": 16.99
+      },
+      {
+        "name": "Bacon Cheeseburger with Fries",
+        "description": "Juicy beef patty topped with bacon and cheddar cheese. Served on a sesame seed bun with a side of fries.",
+        "price": 12.99
+      },
+      {
+        "name": "Margherita Pizza",
+        "description": "Classic pizza topped with fresh mozzarella cheese, sliced tomatoes, and basil.",
+        "price": 11.99
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert made with ladyfingers, espresso, mascarpone cheese, and cocoa powder.",
+        "price": 7.99
+      },
+      {
+        "name": "Chocolate Cake",
+        "description": "Rich and decadent chocolate cake with chocolate frosting.",
+        "price": 6.99
+      },
+      {
+        "name": "New York Cheesecake",
+        "description": "Creamy cheesecake made with cream cheese and graham cracker crust. Served with whipped cream.",
+        "price": 8.99
+      },
+      {
+        "name": "Gelato",
+        "description": "Italian ice cream in a variety of flavors including chocolate, vanilla, and strawberry.",
+        "price": 5.99
+      }
+    ],
+    "beverages": [
+      {
+        "name": "Soft Drinks",
+        "description": "Assorted soft drinks including Coke, Pepsi, Sprite, and Fanta."
+      },
+      {
+        "name": "Iced Tea",
+        "description": "Refreshing iced tea in a variety of flavors including peach and raspberry."
+      },
+      {
+        "name": "Lemonade",
+        "description": "Freshly squeezed lemonade with a touch of sweetness."
+      },
+      {
+        "name": "Coffee and Tea",
+        "description": "Assorted coffee and tea drinks including espresso, cappuccino, and Earl Grey tea."
+      },
+      {
+        "name": "Wine, Beer, and Cocktails",
+        "description": "Assorted alcoholic drinks including red and white wine, beer, and cocktails."
+      }
+    ],
+    "starters-description": "Our starters are the perfect way to whet your appetite and get your taste buds ready for the main course. From the classic garlic bread to the refreshing Caprese salad, our starters offer a range of flavors to suit any palate.",
+    "entrees-description": "Our entrees are the stars of the show, with each dish carefully crafted to deliver a unique and delicious dining experience. From the savory Penne alla vodka to the mouth-watering Bacon cheeseburger with fries, our entrees are sure to satisfy any hunger.",
+    "desserts-description": "Our desserts are the perfect way to finish off your meal on a sweet note. From the classic Tiramisu to the indulgent Chocolate cake, our desserts are made with the finest ingredients to ensure a truly decadent experience.",
+    "beverages-description": "Our beverage selection includes a range of options to complement your meal, from soft drinks and iced tea to wine, beer, and cocktails. Whether you're in the mood for something refreshing or looking to unwind with a drink, our selection has something for everyone."
+  },
+
+  "about-us": "At Bright Bites, we are a team of passionate food enthusiasts who believe in using only the freshest and highest quality ingredients in our dishes. Our goal is to create a warm and welcoming atmosphere where our guests can relax and enjoy their meals. We are committed to providing excellent service and creating an unforgettable dining experience."
+}
