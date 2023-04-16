@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Bright-Bites/static/css/main.53e5350f.css",
+    "main.js": "/Bright-Bites/static/js/main.30999a4d.js",
+    "static/media/chef-hands.jpg": "/Bright-Bites/static/media/chef-hands.2738ccaef7881bf6e6d1.jpg",
+    "static/media/header-video.mp4": "/Bright-Bites/static/media/header-video.9931c02d57a38704ca30.mp4",
+    "static/media/plate1.png": "/Bright-Bites/static/media/plate1.c7cf268a9c49480dcef6.png",
+    "static/media/plate2.png": "/Bright-Bites/static/media/plate2.8163f4476fa1c75fb1db.png",
+    "static/media/interior.jpg": "/Bright-Bites/static/media/interior.41614c023c1745a37b9c.jpg",
+    "static/media/chef-inspecting.jpg": "/Bright-Bites/static/media/chef-inspecting.2bbfbf8ee74b1fe9b642.jpg",
+    "static/media/chefs.jpg": "/Bright-Bites/static/media/chefs.585d534f6beb5e840576.jpg",
+    "static/media/plate3.png": "/Bright-Bites/static/media/plate3.6dbf6c6d70f9bb3c21f3.png",
+    "static/media/324918-P9L77G-642-removebg-preview.png": "/Bright-Bites/static/media/324918-P9L77G-642-removebg-preview.99323cf7ad4b1a813e05.png",
+    "static/media/Bright Bites.png": "/Bright-Bites/static/media/Bright Bites.414e05b1185cdbb4efe8.png",
+    "index.html": "/Bright-Bites/index.html",
+    "main.53e5350f.css.map": "/Bright-Bites/static/css/main.53e5350f.css.map",
+    "main.30999a4d.js.map": "/Bright-Bites/static/js/main.30999a4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53e5350f.css",
+    "static/js/main.30999a4d.js"
+  ]
+}
