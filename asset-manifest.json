@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Bright-Bites/static/css/main.863f6078.css",
-    "main.js": "/Bright-Bites/static/js/main.39234195.js",
-    "static/media/plate1.png": "/Bright-Bites/static/media/plate1.c7cf268a9c49480dcef6.png",
-    "static/media/plate2.png": "/Bright-Bites/static/media/plate2.8163f4476fa1c75fb1db.png",
+    "main.css": "/Bright-Bites/static/css/main.938f5d38.css",
+    "main.js": "/Bright-Bites/static/js/main.b880b368.js",
     "static/media/header-video.mp4": "/Bright-Bites/static/media/header-video.553a8ec7e0e48afd8de1.mp4",
-    "static/media/interior.jpg": "/Bright-Bites/static/media/interior.41614c023c1745a37b9c.jpg",
-    "static/media/vegies.jpg": "/Bright-Bites/static/media/vegies.f0f0ebeac837247d334e.jpg",
+    "static/media/vegies.jpg": "/Bright-Bites/static/media/vegies.28ea27bd476ed4a34cf5.jpg",
+    "static/media/interior.jpg": "/Bright-Bites/static/media/interior.271224a67cc3ab6a0497.jpg",
     "static/media/chef-inspecting.jpg": "/Bright-Bites/static/media/chef-inspecting.2bbfbf8ee74b1fe9b642.jpg",
     "static/media/tablewithdishes.jpg": "/Bright-Bites/static/media/tablewithdishes.7607a5d50d7c367798ac.jpg",
     "static/media/chefs.jpg": "/Bright-Bites/static/media/chefs.585d534f6beb5e840576.jpg",
+    "static/media/plate1.jpg": "/Bright-Bites/static/media/plate1.b67e2ec7e2ed3fc30b59.jpg",
+    "static/media/plate2.jpg": "/Bright-Bites/static/media/plate2.3dda68986e0849aa6aaa.jpg",
     "static/media/plate3.png": "/Bright-Bites/static/media/plate3.6dbf6c6d70f9bb3c21f3.png",
     "static/media/menuCard-bar.png": "/Bright-Bites/static/media/menuCard-bar.99323cf7ad4b1a813e05.png",
     "static/media/food-animation.mp4": "/Bright-Bites/static/media/food-animation.1a8dfe7cb534c41c418c.mp4",
@@ -20,11 +20,11 @@
     "static/media/about.svg": "/Bright-Bites/static/media/about.f313cf589def805f5c8aac36fe9395ce.svg",
     "index.html": "/Bright-Bites/index.html",
     "static/media/contact.svg": "/Bright-Bites/static/media/contact.77af3af96e8f775feab4c86afd5e450c.svg",
-    "main.863f6078.css.map": "/Bright-Bites/static/css/main.863f6078.css.map",
-    "main.39234195.js.map": "/Bright-Bites/static/js/main.39234195.js.map"
+    "main.938f5d38.css.map": "/Bright-Bites/static/css/main.938f5d38.css.map",
+    "main.b880b368.js.map": "/Bright-Bites/static/js/main.b880b368.js.map"
   },
   "entrypoints": [
-    "static/css/main.863f6078.css",
-    "static/js/main.39234195.js"
+    "static/css/main.938f5d38.css",
+    "static/js/main.b880b368.js"
   ]
 }
