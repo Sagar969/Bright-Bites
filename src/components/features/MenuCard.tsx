@@ -1,5 +1,5 @@
 import { useState, ReactElement } from 'react';
-import img from '../../assets/icons/324918-P9L77G-642-removebg-preview.png';
+import img from '../../assets/icons/menuCard-bar.png';
 
 interface CardStyle {
   top: string;
