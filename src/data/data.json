@@ -1,7 +1,7 @@
 {
   "restaurant-name": "Bright Bite",
   "slogan": "Where every bite is a bright spot in your day!",
-  "greeting": "Welcome to Bright Bites, where we serve delicious meals in a cozy and inviting setting. Whether you're looking for a romantic dinner or a family meal, we offer a range of dishes to suit every taste. Check out our menu, make a reservation, or learn about our private dining options. We can't wait to see you!",
+  "greeting": "Welcome to Bright Bites, where we serve delicious meals in a cozy and inviting setting. Whether you're looking for a romantic dinner or a family meal, we offer a range of dishes to suit every taste",
   "menu": {
     "starters": [
       {
@@ -101,11 +101,43 @@
         "description": "Assorted alcoholic drinks including red and white wine, beer, and cocktails."
       }
     ],
-    "starters-description": "Our starters are the perfect way to whet your appetite and get your taste buds ready for the main course. From the classic garlic bread to the refreshing Caprese salad, our starters offer a range of flavors to suit any palate.",
-    "entrees-description": "Our entrees are the stars of the show, with each dish carefully crafted to deliver a unique and delicious dining experience. From the savory Penne alla vodka to the mouth-watering Bacon cheeseburger with fries, our entrees are sure to satisfy any hunger.",
-    "desserts-description": "Our desserts are the perfect way to finish off your meal on a sweet note. From the classic Tiramisu to the indulgent Chocolate cake, our desserts are made with the finest ingredients to ensure a truly decadent experience.",
+    "starters-description": "From the classic garlic bread to the refreshing Caprese salad, our starters offer a range of flavors to suit any palate.",
+    "entrees-description": "From the savory Penne alla vodka to the mouth-watering Bacon cheeseburger with fries, our entrees are sure to satisfy any hunger.",
+    "desserts-description": "From the classic Tiramisu to the indulgent Chocolate cake, our desserts are made with the finest ingredients to ensure a truly decadent experience.",
     "beverages-description": "Our beverage selection includes a range of options to complement your meal, from soft drinks and iced tea to wine, beer, and cocktails. Whether you're in the mood for something refreshing or looking to unwind with a drink, our selection has something for everyone."
   },
+  
+  "reviews": [
+    {
+      "name": "Alexis Johnson",
+      "review": "The food at this restaurant was incredible! I had the steak and it was cooked to perfection. The service was also great, very attentive staff."
+    },
+    {
+      "name": "Daniel Lee",
+      "review": "I visited this restaurant for a birthday celebration and it did not disappoint. The atmosphere was great, the drinks were fantastic, and the food was some of the best I've had in a while."
+    },
+    {
+      "name": "Megan Smith",
+      "review": "I love this restaurant! The menu has so many options and everything I've tried has been delicious. The staff is also very friendly and welcoming."
+    },
+    {
+      "name": "Emily Chen",
+      "review": "If you're looking for a cozy spot with great food, this restaurant is the place to go. I had the pasta dish and it was so flavorful. The ambiance is perfect for a romantic date or a night out with friends."
+    },
+    {
+      "name": "Adam Patel",
+      "review": "This restaurant has quickly become one of my go-to spots for dinner. The portions are generous and the prices are very reasonable for the quality of food you get. Highly recommend!"
+    },
+    {
+      "name": "Samantha Nguyen",
+      "review": "I had brunch at this restaurant and it was amazing. The avocado toast was some of the best I've had and the mimosas were perfect. I can't wait to come back and try more from their menu."
+    },
+    {
+      "name": "John Doe",
+      "review": "I recently tried this restaurant and I was blown away by the quality of the food. The service was top-notch and the atmosphere was very cozy. Can't wait to come back!"
+    }
+  ]
+,
 
-  "about-us": "At Bright Bites, we are a team of passionate food enthusiasts who believe in using only the freshest and highest quality ingredients in our dishes. Our goal is to create a warm and welcoming atmosphere where our guests can relax and enjoy their meals. We are committed to providing excellent service and creating an unforgettable dining experience."
+  "about-us": "At Bright Bites, we are a team of passionate food enthusiasts who believe in using only the freshest and highest quality ingredients in our dishes. Our goal is to create a warm and welcoming atmosphere where our guests can relax and enjoy their meals."
 }
