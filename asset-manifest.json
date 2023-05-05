@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bright-Bites/static/css/main.863f6078.css",
-    "main.js": "/Bright-Bites/static/js/main.d7322448.js",
+    "main.js": "/Bright-Bites/static/js/main.39234195.js",
     "static/media/plate1.png": "/Bright-Bites/static/media/plate1.c7cf268a9c49480dcef6.png",
     "static/media/plate2.png": "/Bright-Bites/static/media/plate2.8163f4476fa1c75fb1db.png",
     "static/media/header-video.mp4": "/Bright-Bites/static/media/header-video.553a8ec7e0e48afd8de1.mp4",
@@ -11,9 +11,9 @@
     "static/media/tablewithdishes.jpg": "/Bright-Bites/static/media/tablewithdishes.7607a5d50d7c367798ac.jpg",
     "static/media/chefs.jpg": "/Bright-Bites/static/media/chefs.585d534f6beb5e840576.jpg",
     "static/media/plate3.png": "/Bright-Bites/static/media/plate3.6dbf6c6d70f9bb3c21f3.png",
-    "static/media/324918-P9L77G-642-removebg-preview.png": "/Bright-Bites/static/media/324918-P9L77G-642-removebg-preview.99323cf7ad4b1a813e05.png",
+    "static/media/menuCard-bar.png": "/Bright-Bites/static/media/menuCard-bar.99323cf7ad4b1a813e05.png",
+    "static/media/food-animation.mp4": "/Bright-Bites/static/media/food-animation.1a8dfe7cb534c41c418c.mp4",
     "static/media/Bright Bites.png": "/Bright-Bites/static/media/Bright Bites.414e05b1185cdbb4efe8.png",
-    "static/media/food-animation.mp4": "/Bright-Bites/static/media/food-animation.25bc78a23d241a41260e.mp4",
     "static/media/menu.svg": "/Bright-Bites/static/media/menu.8b75cc3911aa137a8c8688958609b754.svg",
     "static/media/review.svg": "/Bright-Bites/static/media/review.999cfe33cbba92adeaf66ac82a3445a1.svg",
     "static/media/table.svg": "/Bright-Bites/static/media/table.55727b57c145f1dd57b195f657dac91d.svg",
@@ -21,10 +21,10 @@
     "index.html": "/Bright-Bites/index.html",
     "static/media/contact.svg": "/Bright-Bites/static/media/contact.77af3af96e8f775feab4c86afd5e450c.svg",
     "main.863f6078.css.map": "/Bright-Bites/static/css/main.863f6078.css.map",
-    "main.d7322448.js.map": "/Bright-Bites/static/js/main.d7322448.js.map"
+    "main.39234195.js.map": "/Bright-Bites/static/js/main.39234195.js.map"
   },
   "entrypoints": [
     "static/css/main.863f6078.css",
-    "static/js/main.d7322448.js"
+    "static/js/main.39234195.js"
   ]
 }
