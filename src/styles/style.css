@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cinzel+Decorative:wght@400;700&family=Pacifico&family=Poppins:wght@400;700;900&family=Shadows+Into+Light&family=Urbanist:wght@400;700&display=swap");
-:root {
-  --animation-header-reveal-before: none;
-  --animation-header-reveal-after: none;
-}
-
 *,
 *::before,
 *::after {
@@ -556,6 +551,7 @@ article {
 .menu .menu-section section article {
   font: 1.2rem Poppins, Geneva, sans-serif;
   margin-top: 10px;
+  align-self: flex-start;
 }
 .menu .menu-section section img {
   width: 400px;

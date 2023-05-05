@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cinzel+Decorative:wght@400;700&family=Pacifico&family=Poppins:wght@400;700;900&family=Shadows+Into+Light&family=Urbanist:wght@400;700&display=swap');
 
 // Variables
-// $check-bd: 2px solid blue;
 
 $font-family-1: 'Cinzel Decorative', Verdana, Geneva, sans-serif;
 $font-family-2: Urbanist, verdana, sans-serif;
@@ -14,10 +13,6 @@ $color-1: #f5eecb;
 $color-2: rgb(59, 1, 1);
 $color-3: #0a1134;
 
-:root {
-  --animation-header-reveal-before: none;
-  --animation-header-reveal-after: none;
-}
 
 // Mixins
 @mixin flex {
@@ -561,6 +556,7 @@ article {
       & article {
         font: 1.2rem $font-family-3;
         margin-top: 10px;
+        align-self: flex-start;
       }
       & img {
         width: 400px;

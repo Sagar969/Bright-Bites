@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import data from '../../data/data.json';
-import img1 from '../../assets/images/plate1.png';
-import img2 from '../../assets/images/plate2.png';
+import img1 from '../../assets/images/plate1.jpg';
+import img2 from '../../assets/images/plate2.jpg';
 import img3 from '../../assets/images/plate3.png';
 import MenuCard from '../features/MenuCard';
 import { AppContext } from '../../context/MainContext';
