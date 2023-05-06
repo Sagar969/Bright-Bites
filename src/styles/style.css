@@ -687,9 +687,8 @@ article {
 }
 .reviews section .review-carousel .review h3,
 .reviews section .review-carousel .review .stars {
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: 100px;
+  width: 100%;
+  margin-left: 70px;
   margin-top: -10px;
   font: 1.2rem Pacifico, cursive, sans-serif;
 }
