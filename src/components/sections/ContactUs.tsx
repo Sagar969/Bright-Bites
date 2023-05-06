@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import logo from '../../assets/icons/Bright Bites.png';
+import logo from '../../assets/images/Bright-Bites.webp';
 import { AppContext } from '../../context/MainContext';
 
 interface ContactFormData {
@@ -37,23 +37,27 @@ const ContactForm = () => {
       .querySelector('.logo-wrapper')
       ?.querySelector('img') as HTMLImageElement;
 
+      let timeoutID1: ReturnType<typeof setTimeout>
+      let timeoutID2: ReturnType<typeof setTimeout>
+      let timeoutID3: ReturnType<typeof setTimeout>
+      let timeoutID4: ReturnType<typeof setTimeout>
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((en) => {
         if (en.isIntersecting) {
           section.style.top = '0px';
           section.style.opacity = '1';
-          setTimeout(() => {
+          timeoutID1 = setTimeout(() => {
             formElements.forEach((el, i) => {
-              setTimeout(() => {
+              timeoutID2 = setTimeout(() => {
                 el.style.top = '0px';
                 el.style.opacity = '1';
               }, i * 300);
             });
-            setTimeout(() => {
+            timeoutID3 = setTimeout(() => {
               formBtn.style.top = '0px';
               formBtn.style.opacity = '1';
             }, 900);
-            setTimeout(() => {
+            timeoutID4 = setTimeout(() => {
               logoImg.style.transform = 'scale(1)';
             }, 1200);
           }, 600);
@@ -66,6 +70,14 @@ const ContactForm = () => {
     });
 
     if (!isReduced) sectionObserver.observe(section);
+
+    return () => {
+      clearTimeout(timeoutID1)
+      clearTimeout(timeoutID2)
+      clearTimeout(timeoutID3)
+      clearTimeout(timeoutID4)
+      sectionObserver.disconnect()
+    }
   }, []);
 
   return (

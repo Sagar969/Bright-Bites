@@ -4,10 +4,10 @@ import {
   useEffect,
   useState,
   useContext,
-  useRef
+  useRef,
 } from 'react';
 import data from '../../data/data.json';
-import quote from '../../assets/icons/quote.png';
+import quote from '../../assets/icons/quote.webp';
 import { AppContext } from '../../context/MainContext';
 
 interface ReviewDataType {
@@ -186,39 +186,42 @@ const Reviews = () => {
     setSlideID(undefined);
   };
 
-  const handleIntersection = (
-    entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
-  ) => {
-    const section = document.getElementById('reviews') as HTMLElement;
-    const reviews = section.querySelectorAll(
-      '.review'
-    ) as NodeListOf<HTMLDivElement>;
-    const dotsContainer = section.querySelector(
-      '.carousel-dots'
-    ) as HTMLDivElement;
-
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        section.style.opacity = '1';
-        section.style.top = '0px';
-        reviews.forEach((review, i) => {
-          setTimeout(() => {
-            review.style.left = '50%';
-          }, 200 * i + 200);
-        });
-        setTimeout(() => {
-          dotsContainer.style.left = '0%';
-          autoSlideStart();
-        }, 1400);
-        observer.unobserve(section);
-      }
-    });
-  };
 
   useEffect(() => {
     getUsers();
     updateDots(3);
+
+    let reviewRevealTimeout: ReturnType<typeof setTimeout>;
+    let dotsRevealTimeout: ReturnType<typeof setTimeout>;
+    const handleIntersection = (
+      entries: IntersectionObserverEntry[],
+      observer: IntersectionObserver
+    ) => {
+      const section = document.getElementById('reviews') as HTMLElement;
+      const reviews = section.querySelectorAll(
+        '.review'
+      ) as NodeListOf<HTMLDivElement>;
+      const dotsContainer = section.querySelector(
+        '.carousel-dots'
+      ) as HTMLDivElement;
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.style.opacity = '1';
+          section.style.top = '0px';
+          reviews.forEach((review, i) => {
+            reviewRevealTimeout = setTimeout(() => {
+              review.style.left = '50%';
+            }, 200 * i + 200);
+          });
+          dotsRevealTimeout = setTimeout(() => {
+            dotsContainer.style.left = '0%';
+            autoSlideStart();
+          }, 1000);
+          observer.unobserve(section);
+        }
+      });
+    };
 
     const sectionObserver = new IntersectionObserver(handleIntersection, {
       threshold: 0.3,
@@ -227,6 +230,12 @@ const Reviews = () => {
     const section = document.getElementById('reviews') as HTMLElement;
     if (!isReduced) sectionObserver.observe(section);
     if (isReduced) autoSlideStart();
+
+    return () => {
+      clearTimeout(reviewRevealTimeout)
+      clearTimeout(dotsRevealTimeout)
+      sectionObserver.disconnect();
+    }
   }, []);
   useEffect(() => {
     updateDots(activeDot);

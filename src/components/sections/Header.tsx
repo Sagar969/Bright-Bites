@@ -10,7 +10,6 @@ const Header = () => {
     const navItems = section
       .querySelector('.navbar')
       ?.querySelectorAll('div') as NodeListOf<HTMLDivElement>;
-    const video = section.querySelector('video') as HTMLVideoElement;
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((en) => {
@@ -28,9 +27,9 @@ const Header = () => {
 
     headerObserver.observe(section);
 
-    setTimeout(() => {
-      video.play();
-    }, 4000);
+    return () => {
+      headerObserver.disconnect();
+    }
   }, []);
   useEffect(() => {
     if(isHeaderLoaded) {

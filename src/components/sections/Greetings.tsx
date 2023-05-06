@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import data from '../../data/data.json';
 import { AppContext } from '../../context/MainContext';
-import img from '../../assets/images/vegies.jpg';
-import interiorImg from '../../assets/images/interior.jpg';
+import img from '../../assets/images/vegies.webp';
+import interiorImg from '../../assets/images/interior.webp';
 import Reservation from '../features/Reservation';
 import { useParallax } from 'react-scroll-parallax';
 import { Link } from 'react-scroll';
@@ -24,9 +24,11 @@ const Greetings = () => {
       'div'
     ) as NodeListOf<HTMLDivElement>;
 
+    let showSectionTextTimeout: ReturnType<typeof setTimeout>;
+    let showSectionImgTimeout: ReturnType<typeof setTimeout>;
     const showSectionText = () => {
       textWrapper.style.transform = 'translateX(0%)';
-      setTimeout(() => {
+      showSectionTextTimeout = setTimeout(() => {
         btnContainer.style.transform = 'translateY(0%)';
         btnContainer.style.opacity = '1';
       }, 800);
@@ -36,7 +38,7 @@ const Greetings = () => {
       imgDivs.forEach((el: HTMLDivElement, i) => {
         el.classList.add(`reveal-${i === 0 ? 'vertically' : 'horizontally'}`);
         const img = el.querySelector('img') as HTMLImageElement;
-        setTimeout(() => {
+        showSectionImgTimeout = setTimeout(() => {
           img.style.transform = 'scale(1)';
         }, 700);
       });
@@ -62,6 +64,12 @@ const Greetings = () => {
     );
 
     if (!isReduced) sectionObserver.observe(section);
+
+    return () => {
+      clearTimeout(showSectionTextTimeout)
+      clearTimeout(showSectionImgTimeout)
+      sectionObserver.disconnect();
+    }
   }, []);
 
   const textScroll = useParallax<HTMLDivElement>({

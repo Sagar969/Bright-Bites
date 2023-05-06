@@ -20,15 +20,19 @@ const Navbar = () => {
   );
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const initialRendered = useRef<boolean>(false);
+  const showNavTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const hideNavTimeout = useRef<ReturnType<typeof setTimeout>>();
 
   const toggleNav = (action: string) => {
+    clearTimeout(showNavTimeout.current);
+    clearTimeout(hideNavTimeout.current);
     const nav = document.querySelector('nav') as HTMLElement;
     const listItems = nav.querySelectorAll('li') as NodeListOf<HTMLLIElement>;
     const items = nav.querySelectorAll('div') as NodeListOf<HTMLDivElement>;
     if (action === 'show') {
       const translateValue: number = isLargeScreen ? 0 : -50;
       items?.forEach((item, i) => {
-        setTimeout(() => {
+        showNavTimeout.current = setTimeout(() => {
           item.classList.add('btn-hover-effect');
           item.style.transform = `translateX(${translateValue}%)`;
           item.style.left = '50px';
@@ -38,7 +42,7 @@ const Navbar = () => {
     }
     if (action === 'hide') {
       items?.forEach((item, i) => {
-        setTimeout(() => {
+        hideNavTimeout.current = setTimeout(() => {
           item.style.transform = 'translateX(100%)';
           listItems[i].style.left = '100px';
         }, i * 100);
@@ -55,17 +59,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    let onLoadTimeout: ReturnType<typeof setTimeout>;
     if (isHeaderLoaded) {
       initialRendered.current = true;
-      setTimeout(() => {
+      onLoadTimeout = setTimeout(() => {
         if (isLargeScreen) toggleNav('show');
-      }, 4000)
+      }, 4000);
     }
-  }, [isHeaderLoaded])
+    return () => {
+      clearTimeout(onLoadTimeout);
+    };
+  }, [isHeaderLoaded]);
   useEffect(() => {
     const nav = document.querySelector('nav') as HTMLElement;
     const items = nav.querySelectorAll('div') as NodeListOf<HTMLDivElement>;
-
 
     items.forEach((item) => item.addEventListener('click', handleNavClick));
 

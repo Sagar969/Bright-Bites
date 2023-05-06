@@ -9,23 +9,20 @@ const LoadingScreen = () => {
         const section = document.querySelector('.loading-screen') as HTMLElement
         const video = section.querySelector('video') as HTMLVideoElement
         const text = section.querySelector('span') as HTMLSpanElement
+        let loadingTimeout: ReturnType<typeof setTimeout>
         text.style.left = '50%'
         video.style.left = '0px'
-        // setTimeout(() => {
-        //     video.pause();
-        //     video.style.left = '1000px'
-        //     text.style.left = '-200px';
-        //     setTimeout(() => {
-        //         section.style.transform = 'scale(0)'
-        //     }, 300)
-        // }, 3000)
         if(isHeaderLoaded) {
             video.pause();
             video.style.left = '1000px';
             text.style.left = '-200px';
-            setTimeout(() => {
+            loadingTimeout = setTimeout(() => {
               section.style.transform = 'scale(0)';
             }, 300);
+        }
+
+        return () => {
+          clearTimeout(loadingTimeout)
         }
     }, [isHeaderLoaded])
 

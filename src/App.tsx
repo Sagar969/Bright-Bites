@@ -16,15 +16,24 @@ function App() {
   useEffect(() => {
     const body = document.querySelector('body') as HTMLBodyElement;
     body.style.overflowY = 'hidden';
-    setTimeout(() => {
+    const loadingTimeout = setTimeout(() => {
       changeState('isHeaderLoaded', true)
     }, 5000)
+
+    return () => {
+      clearTimeout(loadingTimeout)
+    }
   }, []);
   useEffect(() => {
+    let timeOutID: ReturnType<typeof setTimeout>;
     if (isHeaderLoaded) {
-      setTimeout(() => {
+      timeOutID = setTimeout(() => {
         setIsLoading(false);
       }, 500)
+    }
+
+    return () => {
+      clearTimeout(timeOutID)
     }
   }, [isHeaderLoaded]);
   useEffect(() => {

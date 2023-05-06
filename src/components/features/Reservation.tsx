@@ -1,6 +1,6 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState, useRef } from 'react';
 import ReactDom from 'react-dom';
-import tableWithDishes from '../../assets/images/tablewithdishes.jpg';
+import tableWithDishes from '../../assets/images/tablewithdishes.webp';
 
 interface ModalProps {
   isOpen: boolean;
@@ -31,14 +31,16 @@ const Reservation = ({ isOpen, setIsOpen }: ModalProps) => {
     guests,
     specialMessage,
   };
+  const closeModalTimeout = useRef<ReturnType<typeof setTimeout>>()
 
   const handleClosingModal = () => {
+    clearTimeout(closeModalTimeout.current)
     const section = document.querySelector('.reservation') as HTMLElement;
     const overlay = section.querySelector('.overlay') as HTMLElement;
     const modal = section.querySelector('.modal') as HTMLElement;
     overlay.style.opacity = '0';
     modal.style.top = '200%';
-    setTimeout(() => {
+    closeModalTimeout.current = setTimeout(() => {
       setIsOpen(false);
     }, 500);
   };
@@ -76,11 +78,15 @@ const Reservation = ({ isOpen, setIsOpen }: ModalProps) => {
     const section = document.querySelector('.reservation') as HTMLElement;
     const overlay = section.querySelector('.overlay') as HTMLElement;
     const modal = section.querySelector('.modal') as HTMLElement;
+    let modalRevealTimeout: ReturnType<typeof setTimeout>
     if (isOpen) {
       setTimeout(() => {
         overlay.style.opacity = '1';
         modal.style.top = '50%';
       }, 0);
+    }
+    return () => {
+      clearTimeout(modalRevealTimeout)
     }
   }, [isOpen]);
   useEffect(() => {

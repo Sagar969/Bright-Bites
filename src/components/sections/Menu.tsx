@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import data from '../../data/data.json';
-import img1 from '../../assets/images/plate1.jpg';
-import img2 from '../../assets/images/plate2.jpg';
-import img3 from '../../assets/images/plate3.png';
+import img1 from '../../assets/images/plate1.webp';
+import img2 from '../../assets/images/plate2.webp';
+import img3 from '../../assets/images/plate3.webp';
 import MenuCard from '../features/MenuCard';
 import { AppContext } from '../../context/MainContext';
 
@@ -48,8 +48,6 @@ const Menu = () => {
       '.menu-section'
     ) as NodeListOf<HTMLElement>;
     const menuCard = sectionWrapper?.querySelector('.menu-card') as HTMLElement;
-    // const sectionHeight = sections[0].getBoundingClientRect().height;
-    // console.log(sectionHeight);
 
     const showImg = (i: number) => {
       imgs[i].style.opacity = '1';
@@ -100,6 +98,7 @@ const Menu = () => {
       }
       sections[i].style.transform = 'translateX(0%)';
       sections[i].style.opacity = '1';
+      menuSectionObserver.unobserve(sections[i])
     };
     const handleMenuSectionIntersection = (
       entries: IntersectionObserverEntry[]
@@ -124,6 +123,11 @@ const Menu = () => {
 
     sections?.forEach((section) => sectionObserver.observe(section));
     sections?.forEach((section) => menuSectionObserver.observe(section));
+
+    return () => {
+      sectionObserver.disconnect()
+      menuSectionObserver.disconnect()
+    }
   }, []);
 
   return (

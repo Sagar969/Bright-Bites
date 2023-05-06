@@ -1,6 +1,6 @@
 import data from '../../data/data.json';
-import img1 from '../../assets/images/chef-inspecting.jpg';
-import img2 from '../../assets/images/chefs.jpg';
+import img1 from '../../assets/images/chef-inspecting.webp';
+import img2 from '../../assets/images/chefs.webp';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/MainContext';
 
@@ -19,18 +19,21 @@ const AboutUs = () => {
     ) as NodeListOf<HTMLDivElement>;
 
     if (!section) return;
+
+    let contentRevealTimeout: ReturnType<typeof setTimeout>
+    let imgsZoomTimeout: ReturnType<typeof setTimeout>
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((en) => {
         if (en.isIntersecting) {
           section.style.top = '0px';
           section.style.opacity = '1';
-          setTimeout(() => {
+          contentRevealTimeout = setTimeout(() => {
             imgsDiv[0].classList.add('reveal-horizontally');
             imgsDiv[1].classList.add('reveal-vertically');
             imgContainer.style.opacity = '1';
             text.style.left = '0px';
             text.style.opacity = '1';
-            setTimeout(() => {
+            imgsZoomTimeout = setTimeout(() => {
               imgsDiv.forEach((el) => {
                 const img = el.querySelector('img') as HTMLImageElement;
                 img.style.transform = 'scale(1)';
@@ -46,6 +49,12 @@ const AboutUs = () => {
     });
 
     if (!isReduced) sectionObserver.observe(section);
+
+    return () => {
+      clearTimeout(contentRevealTimeout)
+      clearTimeout(imgsZoomTimeout)
+      sectionObserver.disconnect();
+    }
   }, []);
   return (
     <section className="about-us section-wrapper" id="about">
