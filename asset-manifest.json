@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Bright-Bites/static/css/main.781e07b7.css",
-    "main.js": "/Bright-Bites/static/js/main.a85d4e7a.js",
+    "main.css": "/Bright-Bites/static/css/main.3eaae907.css",
+    "main.js": "/Bright-Bites/static/js/main.47eed97a.js",
     "static/media/header-video.mp4": "/Bright-Bites/static/media/header-video.9931c02d57a38704ca30.mp4",
     "static/media/vegies.webp": "/Bright-Bites/static/media/vegies.536e15e0eff5303d08a4.webp",
     "static/media/tablewithdishes.webp": "/Bright-Bites/static/media/tablewithdishes.dbc764cc28b76dffc46d.webp",
@@ -21,11 +21,11 @@
     "index.html": "/Bright-Bites/index.html",
     "static/media/about.svg": "/Bright-Bites/static/media/about.f313cf589def805f5c8aac36fe9395ce.svg",
     "static/media/contact.svg": "/Bright-Bites/static/media/contact.77af3af96e8f775feab4c86afd5e450c.svg",
-    "main.781e07b7.css.map": "/Bright-Bites/static/css/main.781e07b7.css.map",
-    "main.a85d4e7a.js.map": "/Bright-Bites/static/js/main.a85d4e7a.js.map"
+    "main.3eaae907.css.map": "/Bright-Bites/static/css/main.3eaae907.css.map",
+    "main.47eed97a.js.map": "/Bright-Bites/static/js/main.47eed97a.js.map"
   },
   "entrypoints": [
-    "static/css/main.781e07b7.css",
-    "static/js/main.a85d4e7a.js"
+    "static/css/main.3eaae907.css",
+    "static/js/main.47eed97a.js"
   ]
 }
