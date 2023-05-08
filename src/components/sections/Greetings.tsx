@@ -66,10 +66,10 @@ const Greetings = () => {
     if (!isReduced) sectionObserver.observe(section);
 
     return () => {
-      clearTimeout(showSectionTextTimeout)
-      clearTimeout(showSectionImgTimeout)
+      clearTimeout(showSectionTextTimeout);
+      clearTimeout(showSectionImgTimeout);
       sectionObserver.disconnect();
-    }
+    };
   }, []);
 
   const textScroll = useParallax<HTMLDivElement>({

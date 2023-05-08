@@ -19,14 +19,15 @@ interface UserDataType {
   picture?: { [key: string]: string };
   name?: { [key: string]: string };
 }
+type timeoutIDType = ReturnType<typeof setTimeout> | undefined;
 
 const Reviews = () => {
   const { isReduced } = useContext(AppContext);
   const reviewsData: ReviewDataType[] = data.reviews;
   const [users, setUsers] = useState<UserDataType[]>([{}]);
-  const [slideId, setSlideID] = useState<any>(undefined);
+  const [slideId, setSlideID] = useState<timeoutIDType>(undefined);
   const [activeDot, setActiveDot] = useState<number>(3);
-  let autoSlideID: NodeJS.Timeout | undefined = undefined;
+  let autoSlideID: timeoutIDType = undefined;
 
   const updateDots = (active: number) => {
     const dots: NodeListOf<HTMLDivElement> = document.querySelectorAll('.dot');
@@ -45,22 +46,18 @@ const Reviews = () => {
         const dataItem = Number(item.dataset.item);
         if (dataItem <= 0) item.dataset.item = '6';
         else item.dataset.item = (dataItem - 1).toString();
-        const active: number = Array.from(items).findIndex(
-          (item) => item.dataset.item === '3'
-        );
-        setActiveDot(active);
       });
     } else {
       items.forEach((item, i) => {
         const dataItem = Number(item.dataset.item);
         if (dataItem >= 6) item.dataset.item = '0';
         else item.dataset.item = (dataItem + 1).toString();
-        const active: number = Array.from(items).findIndex(
-          (item) => item.dataset.item === '3'
-        );
-        setActiveDot(active);
       });
     }
+    const active: number = Array.from(items).findIndex(
+      (item) => item.dataset.item === '3'
+    );
+    setActiveDot(active);
   };
 
   const handleMouseOverCarouselItem: MouseEventHandler<HTMLDivElement> = (
@@ -92,6 +89,7 @@ const Reviews = () => {
     }
     setActiveDot(dotIndex);
     autoSlideStop();
+    autoSlideStart();
   };
 
   let touchStart = useRef<number>(0);

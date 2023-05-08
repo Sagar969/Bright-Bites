@@ -23,7 +23,7 @@ type menuType = {
 };
 
 const Menu = () => {
-  const { windowWidth, isReduced } = useContext(AppContext);
+  const { windowWidth } = useContext(AppContext);
   const menu: menuType = data['menu'];
   const [dishesInCard, setDishesInCard] = useState<MenuItem[]>(menu.starters);
 
