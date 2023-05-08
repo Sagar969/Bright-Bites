@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cinzel+Decorative:wght@400;700&family=Pacifico&family=Poppins:wght@400;700;900&family=Shadows+Into+Light&family=Urbanist:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Pacifico&family=Poppins:wght@400;700;900&family=Shadows+Into+Light&family=Urbanist:wght@400;700&display=swap');
 
 // Variables
 
@@ -6,7 +6,6 @@ $font-family-1: 'Cinzel Decorative', Verdana, Geneva, sans-serif;
 $font-family-2: Urbanist, verdana, sans-serif;
 $font-family-3: Poppins, Geneva, sans-serif;
 $font-family-4: Pacifico, cursive, sans-serif;
-$font-family-5: 'Cedarville Cursive', cursive, sans-serif;
 
 $body-bg: #fff;
 $color-1: #f5eecb;
@@ -199,7 +198,6 @@ article {
         & div {
           display: flex;
           align-items: center;
-          width: 100%;
           width: 300px;
           overflow: hidden;
           border: 2px solid #fff;
@@ -225,8 +223,8 @@ article {
     @include flex;
     position: fixed;
     top: -70px;
-    left: 0;
-    width: 100px;
+    left: 30px;
+    width: 60px;
     height: 60px;
     border: 1px solid #fff;
     & .btn-nav {
@@ -285,8 +283,8 @@ article {
 .section-wrapper {
   margin: 100px 10% 0px;
   min-height: 60vh;
-  // border: 1px solid;
 }
+
 // Section headings common styles
 .section-heading {
   font: 3rem $font-family-1;
@@ -327,7 +325,6 @@ article {
       @include flex;
       gap: 10%;
       & button {
-        position: relative;
         min-height: 50px;
         width: 45%;
         max-width: 300px;
@@ -377,10 +374,7 @@ article {
 // Reservation Modal style
 .reservation {
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   z-index: 100000;
   & .overlay {
     @extend .reservation;
@@ -408,14 +402,12 @@ article {
       position: absolute;
       top: 0;
       left: 0;
-      // height: 100%;
       width: 100%;
       height: 100%;
       overflow: hidden;
       & img {
         width: 100%;
         height: 100%;
-        // transform: scale(1.4);
         scale: 1.4;
         filter: blur(2px);
         animation: reservation-bg 100s linear infinite;
@@ -531,7 +523,6 @@ article {
     transition: all 0.5s ease-in-out;
   }
   & .menu-section {
-    // border: 1px solid;
     height: 600px;
     transform: translateX(-50%);
     opacity: 0;
@@ -696,7 +687,6 @@ article {
         & .review-body {
           position: relative;
           font: 1rem $font-family-2;
-          // border: 1px solid;
           width: 100%;
           margin-top: 20px;
           transform: scale(1);
@@ -712,7 +702,6 @@ article {
               position: relative;
               height: 5px;
               width: 100%;
-              // background: $color-1;
               border-radius: 5px;
               overflow: hidden;
               &::before {
@@ -785,9 +774,6 @@ article {
         border-radius: 50%;
         transition: all 0.5s;
         transform: scale(1);
-        &:hover {
-          transform: scale(1.5);
-        }
       }
       & .active-dot {
         transform: scale(1.5);
@@ -887,9 +873,6 @@ article {
           width: 100%;
           box-shadow: 1px 1px 1px 1px $color-2;
         }
-        // & textarea {
-        //   @extend input;
-        // }
       }
       & button {
         position: relative;
@@ -940,10 +923,6 @@ article {
   }
 }
 @keyframes reveal-header-before-ani {
-  // from,
-  // 88% {
-  //   transform: translateX(0%);
-  // }
   from, 50% {
     transform: translateX(0%);
   }
@@ -952,10 +931,6 @@ article {
   }
 }
 @keyframes reveal-header-after-ani {
-  // from,
-  // 88% {
-  //   transform: translateX(0%);
-  // }
   from, 50% {
     transform: translateX(0%);
   }
@@ -1041,7 +1016,7 @@ article {
 
 // Classes used in multiple elements
 
-// To give some hover effect on headings
+// To give hover effect on headings
 .cs-text {
   position: absolute;
   overflow: hidden;
@@ -1073,7 +1048,7 @@ article {
 }
 
 // buttons and navbar links hover effects
-.btn-hover-effect {
+.nav-hover-effect {
   &::before {
     content: '';
     display: flex;
@@ -1167,17 +1142,9 @@ article {
   }
 }
 
-// To reveal elements with a zoom effect
-.reveal-zoom {
-  transform: scaleX(0);
-  transition: transform 1s;
-  & img {
-    transform: scale(1.5);
-    transition: transform 1.5s;
-  }
-}
-
 // media-queries
+
+// for devices with reduced motion preference
 @media (prefers-reduced-motion: reduced), screen and (max-height: 500px) {
   .navbar {
     & nav {
@@ -1324,6 +1291,8 @@ article {
     }
   }
 }
+
+// for devices that have a working cursor/pointer
 @media (pointer: fine) {
   #custom-cursor {
     display: block;
@@ -1357,7 +1326,18 @@ article {
       }
     }
   }
-  .btn-hover-effect {
+  .reviews {
+    & section {
+      & .carousel-dots {
+        & .dot {
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+  }
+  .nav-hover-effect {
     &:hover {
       &::before {
         transform: translateX(-65%);
@@ -1368,6 +1348,8 @@ article {
     }
   }
 }
+
+// Based on screen sizes
 @media screen and (max-width: 1200px) {
   .section-wrapper {
     margin: 100px 5% 0px;
@@ -1503,7 +1485,7 @@ article {
       }
     }
   }
-  .btn-hover-effect {
+  .nav-hover-effect {
     &::before {
       transform: translateX(-65%);
     }

@@ -46,7 +46,6 @@ function App() {
   return (
     <div className="app">
       {isLoading && <LoadingScreen />}
-      {/* {!isHeaderLoaded && <LoadingScreen />} */}
       <Cursor />
       <Header />
       <Greetings />

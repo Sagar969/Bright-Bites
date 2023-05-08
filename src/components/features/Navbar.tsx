@@ -33,7 +33,7 @@ const Navbar = () => {
       const translateValue: number = isLargeScreen ? 0 : -50;
       items?.forEach((item, i) => {
         showNavTimeout.current = setTimeout(() => {
-          item.classList.add('btn-hover-effect');
+          item.classList.add('nav-hover-effect');
           item.style.transform = `translateX(${translateValue}%)`;
           item.style.left = '50px';
           listItems[i].style.left = '0px';
