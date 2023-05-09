@@ -27,8 +27,7 @@ The website's stunning animations and great user experience make it stand out fr
 
 ### Screenshot
 
-This website is responsive to every screen size.
-Desktop and Mobile view -
+This website is responsive to every screen size. See below for screenshots of the desktop and mobile views:
 
 #### Desktop View
 
@@ -40,9 +39,9 @@ Desktop and Mobile view -
 #### Mobile View
 
 <p align="center">
-<img src="./screenshots/mobile2.jpg" width=32% />
-<img src="./screenshots/mobile3.jpg" width=32% />
-<img src="./screenshots/mobile4.jpg" width=32% />
+<img src="./screenshots/mobile2.jpg" width=32% border="1px" />
+<img src="./screenshots/mobile3.jpg" width=32% border="1px" />
+<img src="./screenshots/mobile4.jpg" width=32% border="1px" />
 </p>
 
 ### Links
@@ -57,7 +56,7 @@ Desktop and Mobile view -
 - [React](https://react.dev/) - JS library
 - [TypeScript](https://www.typescriptlang.org/) - Strongly static typed language build on JavaScript
 - [Sass](https://sass-lang.com/) - Syntactically Awesome Stylesheet
-- [parallax-scroll](https://www.npmjs.com/package/react-scroll-parallax) - for animations while scrolling
+- [parallax-scroll](https://www.npmjs.com/package/react-scroll-parallax) - for animations on scroll
 
 ##### Tools used
 - [PageSpeed](https://pagespeed.web.dev/), [GTMetrix](https://gtmetrix.com/), [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - for performance insights and optimization tips
@@ -78,14 +77,13 @@ Desktop and Mobile view -
 
 ### Continued development
 
-For future development process, I'll continue using TypeScript. I enjoyed working with it a lot. I'll focus more on optimizing the product based on the product type and platforms.
+For future development processes, I will continue to use TypeScript, as I enjoyed working with it a lot. I will focus on optimizing the product based on its type and platform.
 
 ### Useful resources
 
 - [Core Web Vitals](https://www.youtube.com/watch?v=AQqFZ5t8uNc&pp=ygUWY29yZSB3ZWIgdml0YWxzIGdvb2dsZQ%3D%3D) - Optimization guide for core web vitals from Google.
 - [Optimizing LCP](https://www.youtube.com/watch?v=fWoI9DXmpdk&pp=ygUWY29yZSB3ZWIgdml0YWxzIGdvb2dsZQ%3D%3D) - A deep dive into optimizing LCP from Google.
-- [Reduce bundle size](https://blog1.westagilelabs.com/3-tips-to-reduce-your-react-bundles-size-2647e68d3215) - Guide to reduce production build size drastically. Helped me reducing mine from 5mb to 300kb.
-
+- [Reduce bundle size](https://blog1.westagilelabs.com/3-tips-to-reduce-your-react-bundles-size-2647e68d3215) - A guide to drastically reduce production build size. This guide helped me reduce mine from 5mb to 300kb.
 
 ## Author
 
